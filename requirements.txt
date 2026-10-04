@@ -1,0 +1,33 @@
+# Dependensi Python untuk Pipeline Pemodelan PKB DKI Jakarta
+# Diuji pada Python 3.10+ (Google Colab / Ubuntu 24)
+#
+# Instalasi:
+#   pip install -r requirements.txt
+#
+# Google Colab (jika ada konflik sistem):
+#   pip install -r requirements.txt --break-system-packages
+
+# Core numerik
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# Pemodelan statistik deret waktu
+statsmodels>=0.14.0
+
+# Machine learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+
+# Hyperparameter tuning
+optuna>=3.4.0
+
+# Interpretabilitas model
+shap>=0.44.0
+
+# Visualisasi
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Utilitas
+tqdm>=4.65.0

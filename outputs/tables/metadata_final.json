@@ -1,0 +1,115 @@
+{
+  "XGBoost Baseline": {
+    "cv_rmse": 112.92731406540834,
+    "ablation": {
+      "dengan_tahun": 115.35980178668221,
+      "tanpa_tahun": 112.92731406540834
+    },
+    "chosen_variant": "tanpa_tahun",
+    "best_params": {
+      "max_depth": 2,
+      "learning_rate": 0.2362798244757563,
+      "subsample": 0.8044662613833529,
+      "colsample_bytree": 0.7811517607615096,
+      "min_child_weight": 8,
+      "gamma": 0.6696553772137649,
+      "reg_alpha": 1.833353462055828,
+      "reg_lambda": 0.008115412712771001
+    }
+  },
+  "XGBoost Penuh": {
+    "cv_rmse": 106.43008737887821,
+    "ablation": {
+      "dengan_tahun": 106.57812962129188,
+      "tanpa_tahun": 106.43008737887821
+    },
+    "chosen_variant": "tanpa_tahun",
+    "best_params": {
+      "max_depth": 2,
+      "learning_rate": 0.24278747377977844,
+      "subsample": 0.9807886604859088,
+      "colsample_bytree": 0.9516062486436565,
+      "min_child_weight": 7,
+      "gamma": 1.3927623466714176,
+      "reg_alpha": 2.5588759974816067,
+      "reg_lambda": 0.0015293733895378027
+    }
+  },
+  "SARIMA": {
+    "order": [
+      0,
+      1,
+      1
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      2
+    ],
+    "use_log": false,
+    "diagnostics": {
+      "ljung_box_p": 0.6256761714139729,
+      "jarque_bera_p": 4.134139597666432e-06,
+      "breakvar_p": 0.32323779113514767
+    },
+    "exog_cols": null,
+    "exog_ablation": null,
+    "cv_rmse": 127.67224472063604
+  },
+  "SARIMAX": {
+    "order": [
+      1,
+      1,
+      2
+    ],
+    "seasonal_order": [
+      0,
+      1,
+      1
+    ],
+    "use_log": false,
+    "diagnostics": {
+      "ljung_box_p": 0.7542672494939789,
+      "jarque_bera_p": 1.2819384544750923e-172,
+      "breakvar_p": 0.1363557073545958
+    },
+    "exog_cols": [
+      "bbnkb_lag_1",
+      "ikk_lag_1",
+      "inflasi_yoy_lag_1",
+      "covid19",
+      "pemutihan"
+    ],
+    "exog_ablation": {
+      "level": 114.99470708053212,
+      "terdiferensiasi": 127.64509558960931,
+      "chosen": "level"
+    },
+    "cv_rmse": 114.99470708053212
+  },
+  "Ridge Regression": {
+    "cv_rmse": 104.52883533014051
+  },
+  "Naive (Persistence)": {},
+  "Ensemble Rata-rata (SARIMAX+XGBoost Penuh)": {},
+  "Ensemble Berbobot (SARIMAX+XGBoost Penuh)": {
+    "weights": {
+      "SARIMAX": 0.4806602062732773,
+      "XGBoost Penuh": 0.5193397937267227
+    }
+  },
+  "Ensemble Rata-rata (Ridge Regression+XGBoost Penuh)": {},
+  "Ensemble Berbobot (Ridge Regression+XGBoost Penuh)": {
+    "weights": {
+      "Ridge Regression": 0.5045062138740634,
+      "XGBoost Penuh": 0.49549378612593664
+    }
+  },
+  "[ORACLE-EKSPLORATIF] Ensemble Rata-rata (SARIMA+Ridge Regression)": {},
+  "[ORACLE-EKSPLORATIF] Ensemble Berbobot (SARIMA+Ridge Regression)": {
+    "weights": {
+      "SARIMA": 0.4501651555939476,
+      "Ridge Regression": 0.5498348444060523
+    }
+  }
+}

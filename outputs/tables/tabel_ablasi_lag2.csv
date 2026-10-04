@@ -1,0 +1,5 @@
+protokol,varian,cv_rmse,per_lipatan
+A_hp_kandidat21,tanpa_lag2,111.2,"[np.float64(107.25), np.float64(101.09), np.float64(108.48), np.float64(113.28), np.float64(125.92)]"
+A_hp_kandidat21,dengan_lag2,108.49,"[np.float64(109.5), np.float64(104.79), np.float64(112.14), np.float64(108.16), np.float64(107.85)]"
+B_hp_final18,tanpa_lag2,103.55,"[np.float64(101.54), np.float64(104.17), np.float64(114.36), np.float64(97.68), np.float64(100.02)]"
+B_hp_final18,dengan_lag2,113.9,"[np.float64(108.78), np.float64(101.85), np.float64(120.47), np.float64(116.64), np.float64(121.76)]"
